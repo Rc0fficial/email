@@ -24,6 +24,57 @@ const data = {
     { c1: "Low", c2: 1 },
   ],
 };
+const data2 = {
+  title1: "Client",
+  title2: "Count",
+  content: [
+    { c1: "Solaris", c2: 3 },
+    { c1: "1937 Group", c2: 6 },
+    { c1: "Final Bell", c2: 2 },
+    { c1: "Garden Society", c2: 1 },
+  ],
+};
+const data3 = {
+  title1: "Tracker",
+  title2: "Count",
+  content: [
+    { c1: "Technical Support", c2: 3 },
+    { c1: "Maintenance Request", c2: 6 },
+    { c1: "Customer Inquiry", c2: 2 },
+  ],
+};
+const data4 = {
+  title1: "Tracker",
+  title2: "Count",
+  content: [
+    { c1: "Load Robot", c2: 3 },
+    { c1: "Cone Pull", c2: 6 },
+    { c1: "Weigh Station", c2: 0 },
+    { c1: "Cone fill", c2: 3 },
+    { c1: "Compaction", c2: 1 },
+    { c1: "Twist", c2: 0 },
+    { c1: "Clip & tamp", c2: 4 },
+    { c1: "O!load robot", c2: 2 },
+  ],
+};
+const data5 = {
+  title1: "Tracker",
+  title2: "Count",
+  content: [
+    { c1: "Allan", c2: 3 },
+    { c1: "Jacob", c2: 6 },
+    { c1: "Daniel", c2: 2 },
+  ],
+};
+const data6 = {
+  title1: "Tracker",
+  title2: "Count",
+  content: [
+    { c1: "Open", c2: 3 },
+    { c1: "In-progress", c2: 6 },
+    { c1: "Closed", c2: 2 },
+  ],
+};
 
 interface EmailTemplateProps {
   firstName: string;
@@ -34,12 +85,12 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
 }) => (
   <Tailwind>
     <Container className="bg-white py-10">
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col gap-14">
         <div className="flex gap-20">
           <div className="flex items-start gap-4">
             <div className="flex flex-col gap-6">
-                <Diagram text={"Issue worked on by priorty"} />
-                <Svg  text={"testing text"} />
+              <Diagram text={"Issue worked on by priorty"} />
+              <Svg text={"Issue Worked On by Priority"} />
             </div>
             <div className="mt-4">
               <Table data={data} />
@@ -47,51 +98,51 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
           </div>
           <div className="flex items-start gap-4">
             <div className="flex flex-col gap-6">
-                <Diagram text={"Issue worked on by priorty"} />
-                <Svg  text={"testing text"} />
+              <Diagram text={"Issue worked on by priorty"} />
+              <Svg text={"Issue Worked On by Company"} />
             </div>
             <div className="mt-4">
-              <Table data={data} />
+              <Table data={data2} />
             </div>
           </div>
         </div>
         <div className="flex gap-20">
           <div className="flex items-start gap-4">
             <div className="flex flex-col gap-6">
-                <Diagram text={"Issue worked on by priorty"} />
-                <Svg  text={"testing text"} />
+              <Diagram text={"Issue worked on by priorty"} />
+              <Svg text={"Issue Worked On by Type"} />
             </div>
             <div className="mt-4">
-              <Table data={data} />
+              <Table data={data3} />
             </div>
           </div>
           <div className="flex items-start gap-4">
             <div className="flex flex-col gap-6">
-                <Diagram text={"Issue worked on by priorty"} />
-                <Svg  text={"testing text"} />
+              <Diagram text={"Issue worked on by priorty"} />
+              <Svg text={"Issue Worked On by Type"} />
             </div>
             <div className="mt-4">
-              <Table data={data} />
+              <Table data={data4} />
             </div>
           </div>
         </div>
         <div className="flex gap-20">
           <div className="flex items-start gap-4">
             <div className="flex flex-col gap-6">
-                <Diagram text={"Issue worked on by priorty"} />
-                <Svg  text={"testing text"} />
+              <Diagram text={"Issue worked on by priorty"} />
+              <Svg text={"Issue Worked On by Assignee"} />
             </div>
             <div className="mt-4">
-              <Table data={data} />
+              <Table data={data5} />
             </div>
           </div>
           <div className="flex items-start gap-4">
             <div className="flex flex-col gap-6">
-                <Diagram text={"Issue worked on by priorty"} />
-                <Svg  text={"testing text"} />
+              <Diagram text={"Issue worked on by priorty"} />
+              <Svg text={"Issue By Status"} />
             </div>
             <div className="mt-4">
-              <Table data={data} />
+              <Table data={data6} />
             </div>
           </div>
         </div>

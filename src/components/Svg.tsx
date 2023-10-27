@@ -26,7 +26,7 @@ export const Svg: React.FC<Readonly<SvgProps>> = ({ text }) => (
           />
         </div>
         <div>
-          <Text>{text}</Text>
+          <Text className="leading-[0rem]">{text}</Text>
         </div>
       </div>
     </Container>
