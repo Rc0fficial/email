@@ -12,6 +12,7 @@ import {
   Html,
   Head,
   Body,
+  Section,
 } from "@react-email/components";
 import { Table } from "./Table";
 import { Diagram } from "./Diagram";
@@ -86,85 +87,162 @@ interface EmailTemplateProps {
 export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
   firstName,
 }) => (
-      <Html>
-        <Head>
-          <title>My email title</title>
-        </Head>
+  <Html>
+    <Head>
+      <title>My email title</title>
+    </Head>
     <Tailwind>
-      <Body>
-  <Container>
-        <Container className="bg-white py-10">
-          <div className=" flex gap-14 newClass">
-            <div className="flex flex-col sm:flex-row gap-20 newClass">
-              <div className="flex items-start gap-4">
-                <div className="flex flex-col gap-6">
-                  <Diagram text={"Issue worked on by priorty"} />
-                  <Svg text={"Issue Worked On by Priority"} />
-                </div>
-                <div className="mt-4">
-                  <Table data={data} />
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="flex flex-col gap-6">
-                  <Diagram text={"Issue worked on by priorty"} />
-                  <Svg text={"Issue Worked On by Company"} />
-                </div>
-                <div className="mt-4">
-                  <Table data={data2} />
-                </div>
+      <Body className="bg-white my-auto mx-auto font-sans">
+        <Container className="bg-white py-10 mx-10">
+          <Text className="text-center font-bold text-[16px]">
+            Demo Paragraph
+          </Text>
+          <Section>
+            <Column>
+              <Row >
+                <Column>
+                  <Section className="mr-10">
+                    <Column className="">
+                      <Section className="">
+                        <Row className="">
+                          <Column>
+                            {" "}
+                            <Diagram text={"Issue worked on by priorty"} />
+                          </Column>
+                        </Row>
+                        <Row>
+                          <Column>
+                            <Svg text={"Issue Worked On by Priority"} />
+                          </Column>
+                        </Row>
+                      </Section>
+                    </Column>
+                    <Column>
+                      <Row className="">
+                        <Section className="mr-10">
+                          <Table data={data} />
+                        </Section>
+                      </Row>
+                    </Column>
+                  </Section>
+                </Column>
+                <Column>
+                <Section className="mr-10">
+                    <Column className="">
+                      <Section className="">
+                        <Row className="">
+                          <Column>
+                            {" "}
+                            <Diagram text={"Issue worked on by priorty"} />
+                          </Column>
+                        </Row>
+                        <Row>
+                          <Column>
+                            <Svg text={"Issue Worked On by Priority"} />
+                          </Column>
+                        </Row>
+                      </Section>
+                    </Column>
+                    <Column>
+                      <Row className="">
+                        <Section className="mr-10">
+                          <Table data={data} />
+                        </Section>
+                      </Row>
+                    </Column>
+                  </Section>
+                </Column>
+              </Row>
+            </Column>
+          </Section>
+          <Section className="">
+            <div className="flex items-start gap-4">
+              <Section className="flex items-center justify-center">
+                <Row className="flex items-center justify-center">
+                  <Column>
+                    {" "}
+                    <Diagram text={"Issue worked on by priorty"} />
+                  </Column>
+                </Row>
+                <Row>
+                  <Column>
+                    <Svg text={"Issue Worked On by Type"} />
+                  </Column>
+                </Row>
+              </Section>
+
+              <div className="mt-4">
+                <Table data={data3} />
               </div>
             </div>
-            <div className="flex gap-20">
-              <div className="flex items-start gap-4">
-                <div className="flex flex-col gap-6">
-                  <Diagram text={"Issue worked on by priorty"} />
-                  <Svg text={"Issue Worked On by Type"} />
-                </div>
-                <div className="mt-4">
-                  <Table data={data3} />
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="flex flex-col gap-6">
-                  <Diagram text={"Issue worked on by priorty"} />
-                  <Svg text={"Issue Worked On by Type"} />
-                </div>
-                <div className="mt-4">
-                  <Table data={data4} />
-                </div>
+            <div className="flex items-start gap-4">
+              <Section className="flex items-center justify-center">
+                <Row className="flex items-center justify-center">
+                  <Column>
+                    {" "}
+                    <Diagram text={"Issue worked on by priorty"} />
+                  </Column>
+                </Row>
+                <Row>
+                  <Column>
+                    <Svg text={"Issue Worked On by Type"} />
+                  </Column>
+                </Row>
+              </Section>
+              <div className="mt-4">
+                <Table data={data4} />
               </div>
             </div>
-            <div className="flex gap-20">
-              <div className="flex items-start gap-4">
-                <div className="flex flex-col gap-6">
-                  <Diagram text={"Issue worked on by priorty"} />
-                  <Svg text={"Issue Worked On by Assignee"} />
-                </div>
-                <div className="mt-4">
-                  <Table data={data5} />
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="flex flex-col gap-6">
-                  <Diagram text={"Issue worked on by priorty"} />
-                  <Svg text={"Issue By Status"} />
-                </div>
-                <div className="mt-4">
-                  <Table data={data6} />
-                </div>
+          </Section>
+          <Section className="">
+            <div className="flex items-start gap-4">
+              <Section className="flex items-center justify-center">
+                <Row className="flex items-center justify-center">
+                  <Column>
+                    {" "}
+                    <Diagram text={"Issue worked on by priorty"} />
+                  </Column>
+                </Row>
+                <Row>
+                  <Column>
+                    <Svg text={"Issue Worked On by Assignee"} />
+                  </Column>
+                </Row>
+              </Section>
+              <div className="mt-4">
+                <Table data={data5} />
               </div>
             </div>
-            <div>
-              <Img
-                width="100%"
-                src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698444011/Accel_Email_Reports_1_.pdf_2_rrley7.png"
-              />
+            <div className="flex items-start gap-4">
+              <Section className="flex items-center justify-center">
+                <Row className="flex items-center justify-center">
+                  <Column>
+                    {" "}
+                    <Diagram text={"Issue worked on by priorty"} />
+                  </Column>
+                </Row>
+                <Row>
+                  <Column>
+                    <Svg text={"Issue By Status"} />
+                  </Column>
+                </Row>
+              </Section>
+              <div className="mt-4">
+                <Table data={data6} />
+              </div>
             </div>
+          </Section>
+          <div>
+            <Img
+              width="100%"
+              src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698444011/Accel_Email_Reports_1_.pdf_2_rrley7.png"
+            />
           </div>
+          <Text className="text-center font-bold text-[16px]">
+            Demo Paragraph
+          </Text>
         </Container>
-  </Container>
-  </Body>
+      </Body>
     </Tailwind>
-      </Html>
+  </Html>
 );

@@ -11,6 +11,7 @@ import {
   Html,
   Head,
   Body,
+  Section,
 } from "@react-email/components";
 import { Table } from "./Table";
 
@@ -24,17 +25,21 @@ export const Svg: React.FC<Readonly<SvgProps>> = ({ text }) => (
     <Tailwind>
       <Body>
         <Container className="bg-white ">
-          <div className="flex flex-col items-center ">
-            <div>
+          <Section className="mt-6">
+            <Row>
+              <Column align="center">
               <Img
                 src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698437434/vrqscjbkdyxaqwcpq8y8.png"
                 alt="Svg"
               />
-            </div>
-            <div>
-              <Text className="leading-[0rem]">{text}</Text>
-            </div>
-          </div>
+              </Column>
+            </Row>
+            <Row>
+            <Column align="center">
+              <Text className="leading-[0rem] text-center">{text}</Text>
+            </Column>
+            </Row>
+          </Section>
         </Container>
       </Body>
     </Tailwind>
