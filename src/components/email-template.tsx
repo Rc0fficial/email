@@ -88,159 +88,192 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
   firstName,
 }) => (
   <Html>
-    <Head>
-      <title>My email title</title>
-    </Head>
+    <Head />
     <Tailwind>
       <Body className="bg-white my-auto mx-auto font-sans">
-        <Container className="bg-white py-10 mx-10">
-          <Text className="text-center font-bold text-[16px]">
-            Demo Paragraph
-          </Text>
-          <Section>
-            <Column>
-              <Row >
-                <Column>
-                  <Section className="mr-10">
-                    <Column className="">
-                      <Section className="">
-                        <Row className="">
-                          <Column>
-                            {" "}
-                            <Diagram text={"Issue worked on by priorty"} />
-                          </Column>
-                        </Row>
-                        <Row>
-                          <Column>
-                            <Svg text={"Issue Worked On by Priority"} />
-                          </Column>
-                        </Row>
-                      </Section>
-                    </Column>
-                    <Column>
-                      <Row className="">
-                        <Section className="mr-10">
-                          <Table data={data} />
-                        </Section>
-                      </Row>
-                    </Column>
-                  </Section>
+        <Container className="border border-solid border-[#eaeaea] rounded my-[40px] mx-auto p-[10px] w-[1005px] shadow-md">
+          <Section className="mx-auto ">
+            <Column align="center">
+              <Heading className="mt-[15px]">Demo Heading</Heading>
+              <Row align="center">
+                <Column align="center" className="">
+                  <Row align="center">
+                    <Img
+                      src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698435097/dszzvmsffxn74czkvswv.png"
+                      alt="Diagram"
+                      width="200"
+                      height="200"
+                    />
+                  </Row>
+                  <Row className="ml-20 mt-5">
+                    <Img
+                      className="items-center"
+                      src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698437434/vrqscjbkdyxaqwcpq8y8.png"
+                      alt="Svg"
+                    />
+                  </Row>
+                  <Row align="center">
+                    <Text className="leading-[0rem] text-center">
+                      This is test text
+                    </Text>
+                  </Row>
                 </Column>
                 <Column>
-                <Section className="mr-10">
-                    <Column className="">
-                      <Section className="">
-                        <Row className="">
-                          <Column>
-                            {" "}
-                            <Diagram text={"Issue worked on by priorty"} />
-                          </Column>
-                        </Row>
-                        <Row>
-                          <Column>
-                            <Svg text={"Issue Worked On by Priority"} />
-                          </Column>
-                        </Row>
-                      </Section>
-                    </Column>
-                    <Column>
-                      <Row className="">
-                        <Section className="mr-10">
-                          <Table data={data} />
-                        </Section>
-                      </Row>
-                    </Column>
-                  </Section>
+                  <Row>
+                    <Table data={data} />
+                  </Row>
+                </Column>
+                <Column align="center" className="">
+                  <Row>
+                    <Img
+                      src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698435097/dszzvmsffxn74czkvswv.png"
+                      alt="Diagram"
+                      width="200"
+                      height="200"
+                    />
+                  </Row>
+                  <Row className="ml-20 mt-5">
+                    <Img
+                      className="items-center"
+                      src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698437434/vrqscjbkdyxaqwcpq8y8.png"
+                      alt="Svg"
+                    />
+                  </Row>
+                  <Row>
+                    <Text className="leading-[0rem] text-center">
+                      This is test text
+                    </Text>
+                  </Row>
+                </Column>
+                <Column>
+                  <Row>
+                    <Table data={data} />
+                  </Row>
                 </Column>
               </Row>
+              <Row align="center" className="mt-[22px]">
+                <Column align="center" className="">
+                  <Row align="center">
+                    <Img
+                      src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698435097/dszzvmsffxn74czkvswv.png"
+                      alt="Diagram"
+                      width="200"
+                      height="200"
+                    />
+                  </Row>
+                  <Row className="ml-20 mt-5">
+                    <Img
+                      className="items-center"
+                      src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698437434/vrqscjbkdyxaqwcpq8y8.png"
+                      alt="Svg"
+                    />
+                  </Row>
+                  <Row align="center">
+                    <Text className="leading-[0rem] text-center">
+                      This is test text
+                    </Text>
+                  </Row>
+                </Column>
+                <Column>
+                  <Row>
+                    <Table data={data} />
+                  </Row>
+                </Column>
+                <Column align="center" className="">
+                  <Row>
+                    <Img
+                      src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698435097/dszzvmsffxn74czkvswv.png"
+                      alt="Diagram"
+                      width="200"
+                      height="200"
+                    />
+                  </Row>
+                  <Row className="ml-20 mt-5">
+                    <Img
+                      className="items-center"
+                      src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698437434/vrqscjbkdyxaqwcpq8y8.png"
+                      alt="Svg"
+                    />
+                  </Row>
+                  <Row>
+                    <Text className="leading-[0rem] text-center">
+                      This is test text
+                    </Text>
+                  </Row>
+                </Column>
+                <Column>
+                  <Row>
+                    <Table data={data} />
+                  </Row>
+                </Column>
+              </Row>
+              <Row align="center" className="mt-[22px]">
+                <Column align="center" className="">
+                  <Row align="center">
+                    <Img
+                      src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698435097/dszzvmsffxn74czkvswv.png"
+                      alt="Diagram"
+                      width="200"
+                      height="200"
+                    />
+                  </Row>
+                  <Row className="ml-20 mt-5">
+                    <Img
+                      className="items-center"
+                      src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698437434/vrqscjbkdyxaqwcpq8y8.png"
+                      alt="Svg"
+                    />
+                  </Row>
+                  <Row align="center">
+                    <Text className="leading-[0rem] text-center">
+                      This is test text
+                    </Text>
+                  </Row>
+                </Column>
+                <Column>
+                  <Row>
+                    <Table data={data} />
+                  </Row>
+                </Column>
+                <Column align="center" className="">
+                  <Row>
+                    <Img
+                      src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698435097/dszzvmsffxn74czkvswv.png"
+                      alt="Diagram"
+                      width="200"
+                      height="200"
+                    />
+                  </Row>
+                  <Row className="ml-20 mt-5">
+                    <Img
+                      className="items-center"
+                      src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698437434/vrqscjbkdyxaqwcpq8y8.png"
+                      alt="Svg"
+                    />
+                  </Row>
+                  <Row>
+                    <Text className="leading-[0rem] text-center">
+                      This is test text
+                    </Text>
+                  </Row>
+                </Column>
+                <Column>
+                  <Row>
+                    <Table data={data} />
+                  </Row>
+                </Column>
+              </Row>
+              <Row>
+                <Column>
+                  <Img
+                    width="100%"
+                    src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698444011/Accel_Email_Reports_1_.pdf_2_rrley7.png"
+                  />
+                </Column>
+              </Row>
+              <Heading className="mt-[15px]">Demo Heading</Heading>
             </Column>
           </Section>
-          <Section className="">
-            <div className="flex items-start gap-4">
-              <Section className="flex items-center justify-center">
-                <Row className="flex items-center justify-center">
-                  <Column>
-                    {" "}
-                    <Diagram text={"Issue worked on by priorty"} />
-                  </Column>
-                </Row>
-                <Row>
-                  <Column>
-                    <Svg text={"Issue Worked On by Type"} />
-                  </Column>
-                </Row>
-              </Section>
-
-              <div className="mt-4">
-                <Table data={data3} />
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <Section className="flex items-center justify-center">
-                <Row className="flex items-center justify-center">
-                  <Column>
-                    {" "}
-                    <Diagram text={"Issue worked on by priorty"} />
-                  </Column>
-                </Row>
-                <Row>
-                  <Column>
-                    <Svg text={"Issue Worked On by Type"} />
-                  </Column>
-                </Row>
-              </Section>
-              <div className="mt-4">
-                <Table data={data4} />
-              </div>
-            </div>
-          </Section>
-          <Section className="">
-            <div className="flex items-start gap-4">
-              <Section className="flex items-center justify-center">
-                <Row className="flex items-center justify-center">
-                  <Column>
-                    {" "}
-                    <Diagram text={"Issue worked on by priorty"} />
-                  </Column>
-                </Row>
-                <Row>
-                  <Column>
-                    <Svg text={"Issue Worked On by Assignee"} />
-                  </Column>
-                </Row>
-              </Section>
-              <div className="mt-4">
-                <Table data={data5} />
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <Section className="flex items-center justify-center">
-                <Row className="flex items-center justify-center">
-                  <Column>
-                    {" "}
-                    <Diagram text={"Issue worked on by priorty"} />
-                  </Column>
-                </Row>
-                <Row>
-                  <Column>
-                    <Svg text={"Issue By Status"} />
-                  </Column>
-                </Row>
-              </Section>
-              <div className="mt-4">
-                <Table data={data6} />
-              </div>
-            </div>
-          </Section>
-          <div>
-            <Img
-              width="100%"
-              src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698444011/Accel_Email_Reports_1_.pdf_2_rrley7.png"
-            />
-          </div>
-          <Text className="text-center font-bold text-[16px]">
-            Demo Paragraph
-          </Text>
         </Container>
       </Body>
     </Tailwind>

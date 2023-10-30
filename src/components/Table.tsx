@@ -12,6 +12,7 @@ import {
   Html,
   Head,
   Body,
+  Section,
 } from "@react-email/components";
 
 interface TableProps {
@@ -19,27 +20,18 @@ interface TableProps {
 }
 
 export const Table: React.FC<Readonly<TableProps>> = ({ data }) => (
-  <Html>
-    <Head />
-    <Tailwind>
-      <Body>
-        <Container className="bg-white">
-          <div className="border-2 ">
-            <table className="border border-black">
-              <tr className="bg-gray-200">
-                <th className="border-r-2 border-black">{data?.title1}</th>
-                <th>{data?.title2}</th>
-              </tr>
-              {data?.content?.map((item: any, key: any) => (
-                <tr key={key} className="bg-gray-100">
-                  <td className="border-r-2 border-black">{item.c1}</td>
-                  <td>{item.c2}</td>
-                </tr>
-              ))}
-            </table>
-          </div>
-        </Container>
-      </Body>
-    </Tailwind>
-  </Html>
+  <Section>
+    <table className="border border-black">
+      <tr className="bg-gray-200">
+        <th className="border-r-2 border-black">{data?.title1}</th>
+        <th>{data?.title2}</th>
+      </tr>
+      {data?.content?.map((item: any, key: any) => (
+        <tr key={key} className="bg-gray-100">
+          <td className="border-r-2 border-black">{item.c1}</td>
+          <td>{item.c2}</td>
+        </tr>
+      ))}
+    </table>
+  </Section>
 );
