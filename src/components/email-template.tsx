@@ -1,84 +1,23 @@
 import * as React from "react";
-import { Test } from "./test";
-import {
-  Container,
-  Heading,
-  Button,
-  Tailwind,
-  Img,
-  Row,
-  Column,
-  Text,
-  Html,
-  Head,
-  Body,
-  Section,
-} from "@react-email/components";
-import { Table } from "./Table";
-import { Diagram } from "./Diagram";
-import { Svg } from "./Svg";
 
-const data = {
-  title1: "Priority",
-  title2: "Count",
-  content: [
-    { c1: "High", c2: 3 },
-    { c1: "High", c2: 6 },
-    { c1: "Medium", c2: 2 },
-    { c1: "Low", c2: 1 },
-  ],
-};
-const data2 = {
-  title1: "Client",
-  title2: "Count",
-  content: [
-    { c1: "Solaris", c2: 3 },
-    { c1: "1937 Group", c2: 6 },
-    { c1: "Final Bell", c2: 2 },
-    { c1: "Garden Society", c2: 1 },
-  ],
-};
-const data3 = {
-  title1: "Tracker",
-  title2: "Count",
-  content: [
-    { c1: "Technical Support", c2: 3 },
-    { c1: "Maintenance Request", c2: 6 },
-    { c1: "Customer Inquiry", c2: 2 },
-  ],
-};
-const data4 = {
-  title1: "Tracker",
-  title2: "Count",
-  content: [
-    { c1: "Load Robot", c2: 3 },
-    { c1: "Cone Pull", c2: 6 },
-    { c1: "Weigh Station", c2: 0 },
-    { c1: "Cone fill", c2: 3 },
-    { c1: "Compaction", c2: 1 },
-    { c1: "Twist", c2: 0 },
-    { c1: "Clip & tamp", c2: 4 },
-    { c1: "O!load robot", c2: 2 },
-  ],
-};
-const data5 = {
-  title1: "Tracker",
-  title2: "Count",
-  content: [
-    { c1: "Allan", c2: 3 },
-    { c1: "Jacob", c2: 6 },
-    { c1: "Daniel", c2: 2 },
-  ],
-};
-const data6 = {
-  title1: "Tracker",
-  title2: "Count",
-  content: [
-    { c1: "Open", c2: 3 },
-    { c1: "In-progress", c2: 6 },
-    { c1: "Closed", c2: 2 },
-  ],
-};
+import {
+  Body,
+  Button,
+  Column,
+  Container,
+  Head,
+  Heading,
+  Hr,
+  Html,
+  Img,
+  Link,
+  Preview,
+  Row,
+  Section,
+  Tailwind,
+  Text,
+} from "@react-email/components";
+
 
 interface EmailTemplateProps {
   firstName: string;
@@ -91,188 +30,566 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
     <Head />
     <Tailwind>
       <Body className="bg-white my-auto mx-auto font-sans">
-        <Container className="border border-solid border-[#eaeaea] rounded my-[40px] mx-auto p-[10px] w-[1005px] shadow-md">
-          <Section className="mx-auto ">
-            <Column align="center">
-              <Heading className="mt-[15px]">Demo Heading</Heading>
-              <Row align="center">
-                <Column align="center" className="">
-                  <Row align="center">
-                    <Img
-                      src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698435097/dszzvmsffxn74czkvswv.png"
-                      alt="Diagram"
-                      width="200"
-                      height="200"
-                    />
+        <Container className="  border border-solid border-[#eaeaea] rounded my-[40px] mx-auto p-[10px] w-[1005px]">
+          <Section className="bg-[#283342]  py-4 px-4">
+            <Row>
+              <Column align="left">
+                <Img
+                  src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699257122/Hello_By_Mainland_1_wvhv9o.png"
+                  alt="Cat"
+                  width="125"
+                  height="23"
+                />
+              </Column>
+              <Column align="right">
+                <Text className="text-white m-0 text-[16px] font-semibold">
+                  Sylvan Learning
+                </Text>
+                <Text className="text-white m-0 text-[8px] font-[400]">
+                  Login to Your Dashboard
+                </Text>
+              </Column>
+            </Row>
+          </Section>
+          <Section align="center" className="bg-[#E11C22] h-[52px]  w-full">
+            <Row align="right">
+              {/* <Img
+                src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699266306/Ellipse_58_yjiagp.png"
+                alt="red circle"
+                width="67"
+                height="67"
+                className="   "
+              /> */}
+
+              <Text className="  text-[12px] font-[500] text-white text-center z-10">
+                Story published
+              </Text>
+            </Row>
+          </Section>
+          <Section align="center" className="bg-[#EBEBEB] px-[20px] pt-[20px] mt-[0px]">
+            <Section>
+              <Section align="center">
+                <Row align="center">
+                  <Column  align="left">
+                    <Section
+                      align="left"
+                      className="h-[253px] bg-[#283342] max-w-[255px]"
+                    >
+                      <Text className="text-white font-[800] size-[12px] px-[12px] pt-[5px] uppercase">
+                        Sylvan Learning
+                      </Text>
+                      <Hr className=" border-t-[#E11C22] " />
+                      <Section
+                        align="center"
+                        className="max-w-[231px] mt-[10px]"
+                      >
+                        <Img
+                          className="w-full h-[131px]"
+                          src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699306125/8261e5e01ed7112ce73e5e01ea9418274711_1_diwrkt.png"
+                        />
+                        <Section className=" h-[94px] bg-[#E11C22]">
+                          <Text className="  w-[68px] h-[12px] text-[#D0352F] text-center my-0 text-[7px] font-[700] bg-white leading-[10px]">
+                            Featured article
+                          </Text>
+                          <Text className="text-center text-white font-[700] text-[10px] leading-[11px]">
+                            The Daily Gazette: Another Sylvan Learning Center to
+                            Open in Saratoga County
+                          </Text>
+                        </Section>
+                        <Section align="center" className="bg-[#B72D26]">
+                          <Row align="center">
+                            <Column
+                              align="left"
+                              className="text-[#fff] text-[10px] text-[700] leading-[0px]"
+                            >
+                              <Text className="text-center text-white font-[700] text-[10px] leading-[11px]">
+                                SHARE:
+                              </Text>
+                            </Column>
+                            <Column align="left">
+                              <Img src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699309964/Group_848_fi1yhk.png" />
+                            </Column>
+                            <Column align="center">
+                              <Img  src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699395179/Icon_2_wiijow.png" />
+                            </Column>
+                            {/* <Column align="center">
+                              <Img src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699309964/Group_848_fi1yhk.png" />
+                            </Column> */}
+                            <Column align="right">
+                              <Text className="text-center text-white font-[700] text-[10px] leading-[11px]">
+                                READ MORE
+                              </Text>
+                            </Column>
+                          </Row>
+                        </Section>
+                      </Section>
+                    </Section>
+                  </Column>
+
+                  <Section className="max-w-[245px] ml-[10px]">
+                    <Text className="text-start text-[14px] font-[600] leading-[18px]">
+                      Brand Name
+                    </Text>
+                    <Text className="text-start leading-[18px]">
+                      Congratulations your story has been published. Would you
+                      like to increase the amount of readers? Here how
+                    </Text>
+                    <Section>
+                      <Row align="center">
+                        <Column align="left">
+                          <Img src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699374017/Group_1089_sonjdy.png"></Img>
+                        </Column>
+                        <Column align="center" className="max-w-[91px]">
+                          <Text className="leading-[12px] text-[10px] text-start">
+                            <strong> Launch an AMPD Campaign </strong> <br /> to
+                            increase the size of the audience
+                          </Text>
+                        </Column>
+                        <Column align="right">
+                          <Img src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699373914/Group_1074_yeusn6.png"></Img>
+                        </Column>
+                      </Row>
+                      <Row align="center">
+                        <Column align="left">
+                          <Img src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699373915/Group_1088_fqxnpr.png"></Img>
+                        </Column>
+                        <Column align="center" className="max-w-[91px]">
+                          <Text className="leading-[12px] text-[10px] text-start">
+                            <strong> Launch an AMPD Campaign </strong> <br /> to
+                            increase the size of the audience
+                          </Text>
+                        </Column>
+                        <Column align="right">
+                          <Img src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699373917/Group_850_pkejds.png"></Img>
+                        </Column>
+                      </Row>
+                      <Row align="center">
+                        <Column align="left">
+                          <Img src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699373914/Group_1087_oklnw6.png"></Img>
+                        </Column>
+                        <Column align="center" className="max-w-[91px]">
+                          <Text className="leading-[12px] text-[10px] text-start">
+                            <strong> Launch an AMPD Campaign </strong> <br /> to
+                            increase the size of the audience
+                          </Text>
+                        </Column>
+                        <Column align="right">
+                          <Img src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699373918/Group_848_1_kermjj.png"></Img>
+                        </Column>
+                      </Row>
+                      <Row align="center">
+                        <Column align="left">
+                          <Img src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699373917/Group_1090_ylnqgo.png"></Img>
+                        </Column>
+                        <Column align="center" className="max-w-[91px]">
+                          <Text className="leading-[12px] text-[10px] text-start">
+                            <strong> Launch an AMPD Campaign </strong> <br /> to
+                            increase the size of the audience
+                          </Text>
+                        </Column>
+                        <Column align="right">
+                          <Img src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699373915/Group_1075_mrgwyd.png"></Img>
+                        </Column>
+                      </Row>
+                    </Section>
+                  </Section>
+                </Row>
+              </Section>
+              <Section
+                align="center"
+                className="bg-[#E11C22] h-[52px]  w-full mt-[31px] bg-[]"
+              >
+                <Row align="right">
+                  {/* <Img
+                    src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699266306/Ellipse_58_yjiagp.png"
+                    alt="red circle"
+                    width="67"
+                    height="67"
+                    className="  "
+                  /> */}
+
+                  <Text className="  text-[12px] font-[500] text-white text-center z-10">
+                    AMPLIFY A TRENDING STORY
+                  </Text>
+                </Row>
+              </Section>
+              <Section className="bg-[#283342]">
+                <Hr className=" border-t-[#E11C22] my-[31px]" />
+                <Section className="  ">
+                  <Row align="center" className="px-[10px]">
+                    <Column align="left">
+                      <Section align="left" className="max-w-[167px] mt-[10px]">
+                        <Img
+                          className="w-full h-[131px]"
+                          src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699306125/8261e5e01ed7112ce73e5e01ea9418274711_1_diwrkt.png"
+                        />
+                        <Section align="center" className="bg-[#E11C22]">
+                          <Row align="left">
+                            <Column>
+                              <Text className="text-white font-[700] text-[21px] mx-[6px] text-start">
+                                1
+                              </Text>
+                            </Column>
+                            <Column>
+                              <Text className="text-center text-white font-[700] text-[10px] leading-[11px] text-start">
+                                Sylvan Learning Franchisees Discuss Multi-Unit
+                                Ownership and Scaling Their Business
+                              </Text>
+                            </Column>
+                          </Row>
+                        </Section>
+                        <Section align="center" className="bg-[#B72D26]">
+                          <Row align="center">
+                            <Column
+                              align="left"
+                              className="text-[#fff] text-[10px] text-[700] leading-[0px]"
+                            ></Column>
+                            <Column align="right">
+                              <Text className="text-end text-white font-[700] text-[10px] leading-[0px] m-[8px]">
+                                Amplify Reach
+                              </Text>
+                            </Column>
+                          </Row>
+                        </Section>
+                      </Section>
+                    </Column>
+                    <Column align="center" className="ml-[5px] mr-[5px]">
+                      <Section align="left" className="max-w-[167px] mt-[10px]">
+                        <Img
+                          className="w-full h-[131px]"
+                          src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699306125/8261e5e01ed7112ce73e5e01ea9418274711_1_diwrkt.png"
+                        />
+                        <Section  className="bg-[#E11C22]">
+                          <Row align="left">
+                            <Column>
+                              <Text className="text-white font-[700] text-[21px] mx-[6px] text-start">
+                                1
+                              </Text>
+                            </Column>
+                            <Column>
+                              <Text className="text-center text-white font-[700] text-[10px] leading-[11px] text-start">
+                                Sylvan Learning Franchisees Discuss Multi-Unit
+                                Ownership and Scaling Their Business
+                              </Text>
+                            </Column>
+                          </Row>
+                        </Section>
+                        <Section align="center" className="bg-[#B72D26]">
+                          <Row align="center">
+                            <Column
+                              align="left"
+                              className="text-[#fff] text-[10px] text-[700] leading-[0px]"
+                            ></Column>
+                            <Column align="right">
+                              <Text className="text-end text-white font-[700] text-[10px] leading-[0px] m-[8px]">
+                                Amplify Reach
+                              </Text>
+                            </Column>
+                          </Row>
+                        </Section>
+                      </Section>
+                    </Column>
+                    <Column align="right">
+                      <Section align="left" className="max-w-[167px] mt-[10px]">
+                        <Img
+                          className="w-full h-[131px]"
+                          src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699306125/8261e5e01ed7112ce73e5e01ea9418274711_1_diwrkt.png"
+                        />
+                        <Section align="center" className="bg-[#E11C22]">
+                          <Row align="left">
+                            <Column>
+                              <Text className="text-white font-[700] text-[21px] mx-[6px] text-start">
+                                1
+                              </Text>
+                            </Column>
+                            <Column>
+                              <Text className="text-center text-white font-[700] text-[10px] leading-[11px] text-start">
+                                Sylvan Learning Franchisees Discuss Multi-Unit
+                                Ownership and Scaling Their Business
+                              </Text>
+                            </Column>
+                          </Row>
+                        </Section>
+                        <Section align="center" className="bg-[#B72D26]">
+                          <Row align="center">
+                            <Column
+                              align="left"
+                              className="text-[#fff] text-[10px] text-[700] leading-[0px]"
+                            ></Column>
+                            <Column align="right">
+                              <Text className="text-end text-white font-[700] text-[10px] leading-[0px] m-[8px]">
+                                Amplify Reach
+                              </Text>
+                            </Column>
+                          </Row>
+                        </Section>
+                      </Section>
+                    </Column>
                   </Row>
-                  <Row className="ml-20 mt-5">
-                    <Img
-                      className="items-center"
-                      src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698437434/vrqscjbkdyxaqwcpq8y8.png"
-                      alt="Svg"
-                    />
+                </Section>
+                <Section className="mx-auto ml-[2px] mt-[29px]">
+                  <Row align="center" className="px-[10px]">
+                    <Column align="left">
+                      <Section align="left" className="max-w-[167px] mt-[10px]">
+                        <Img
+                          className="w-full h-[131px]"
+                          src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699306125/8261e5e01ed7112ce73e5e01ea9418274711_1_diwrkt.png"
+                        />
+                        <Section align="center" className="bg-[#E11C22]">
+                          <Row align="left">
+                            <Column>
+                              <Text className="text-white font-[700] text-[21px] mx-[6px] text-start">
+                                1
+                              </Text>
+                            </Column>
+                            <Column>
+                              <Text className="text-center text-white font-[700] text-[10px] leading-[11px] text-start">
+                                Sylvan Learning Franchisees Discuss Multi-Unit
+                                Ownership and Scaling Their Business
+                              </Text>
+                            </Column>
+                          </Row>
+                        </Section>
+                        <Section align="center" className="bg-[#B72D26]">
+                          <Row align="center">
+                            <Column
+                              align="left"
+                              className="text-[#fff] text-[10px] text-[700] leading-[0px]"
+                            ></Column>
+                            <Column align="right">
+                              <Text className="text-end text-white font-[700] text-[10px] leading-[0px] m-[8px]">
+                                Amplify Reach
+                              </Text>
+                            </Column>
+                          </Row>
+                        </Section>
+                      </Section>
+                    </Column>
+                    <Column align="center">
+                      <Section align="left" className="max-w-[167px] mt-[10px]">
+                        <Img
+                          className="w-full h-[131px]"
+                          src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699306125/8261e5e01ed7112ce73e5e01ea9418274711_1_diwrkt.png"
+                        />
+                        <Section align="center" className="bg-[#E11C22]">
+                          <Row align="left">
+                            <Column>
+                              <Text className="text-white font-[700] text-[21px] mx-[6px] text-start">
+                                1
+                              </Text>
+                            </Column>
+                            <Column>
+                              <Text className="text-center text-white font-[700] text-[10px] leading-[11px] text-start">
+                                Sylvan Learning Franchisees Discuss Multi-Unit
+                                Ownership and Scaling Their Business
+                              </Text>
+                            </Column>
+                          </Row>
+                        </Section>
+                        <Section align="center" className="bg-[#B72D26]">
+                          <Row align="center">
+                            <Column
+                              align="left"
+                              className="text-[#fff] text-[10px] text-[700] leading-[0px]"
+                            ></Column>
+                            <Column align="right">
+                              <Text className="text-end text-white font-[700] text-[10px] leading-[0px] m-[8px]">
+                                Amplify Reach
+                              </Text>
+                            </Column>
+                          </Row>
+                        </Section>
+                      </Section>
+                    </Column>
+                    <Column align="right">
+                      <Section align="left" className="max-w-[167px] mt-[10px]">
+                        <Img
+                          className="w-full h-[131px]"
+                          src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699306125/8261e5e01ed7112ce73e5e01ea9418274711_1_diwrkt.png"
+                        />
+                        <Section align="center" className="bg-[#E11C22]">
+                          <Row align="left">
+                            <Column>
+                              <Text className="text-white font-[700] text-[21px] mx-[6px] text-start">
+                                1
+                              </Text>
+                            </Column>
+                            <Column>
+                              <Text className="text-center text-white font-[700] text-[10px] leading-[11px] text-start">
+                                Sylvan Learning Franchisees Discuss Multi-Unit
+                                Ownership and Scaling Their Business
+                              </Text>
+                            </Column>
+                          </Row>
+                        </Section>
+                        <Section align="center" className="bg-[#B72D26]">
+                          <Row align="center">
+                            <Column
+                              align="left"
+                              className="text-[#fff] text-[10px] text-[700] leading-[0px]"
+                            ></Column>
+                            <Column align="right">
+                              <Text className="text-end text-white font-[700] text-[10px] leading-[0px] m-[8px]">
+                                Amplify Reach
+                              </Text>
+                            </Column>
+                          </Row>
+                        </Section>
+                      </Section>
+                    </Column>
+                  </Row>
+                </Section>
+                <Section className="mx-auto ml-[2px] mt-[29px]">
+                  <Row align="center" className="px-[10px]">
+                    <Column align="left">
+                      <Section align="left" className="max-w-[167px] mt-[10px]">
+                        <Img
+                          className="w-full h-[131px]"
+                          src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699306125/8261e5e01ed7112ce73e5e01ea9418274711_1_diwrkt.png"
+                        />
+                        <Section align="center" className="bg-[#E11C22]">
+                          <Row align="left">
+                            <Column>
+                              <Text className="text-white font-[700] text-[21px] mx-[6px] text-start">
+                                1
+                              </Text>
+                            </Column>
+                            <Column>
+                              <Text className="text-center text-white font-[700] text-[10px] leading-[11px] text-start">
+                                Sylvan Learning Franchisees Discuss Multi-Unit
+                                Ownership and Scaling Their Business
+                              </Text>
+                            </Column>
+                          </Row>
+                        </Section>
+                        <Section align="center" className="bg-[#B72D26]">
+                          <Row align="center">
+                            <Column
+                              align="left"
+                              className="text-[#fff] text-[10px] text-[700] leading-[0px]"
+                            ></Column>
+                            <Column align="right">
+                              <Text className="text-end text-white font-[700] text-[10px] leading-[0px] m-[8px]">
+                                Amplify Reach
+                              </Text>
+                            </Column>
+                          </Row>
+                        </Section>
+                      </Section>
+                    </Column>
+                    <Column align="center">
+                      <Section align="left" className="max-w-[167px] mt-[10px]">
+                        <Img
+                          className="w-full h-[131px]"
+                          src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699306125/8261e5e01ed7112ce73e5e01ea9418274711_1_diwrkt.png"
+                        />
+                        <Section align="center" className="bg-[#E11C22]">
+                          <Row align="left">
+                            <Column>
+                              <Text className="text-white font-[700] text-[21px] mx-[6px] text-start">
+                                1
+                              </Text>
+                            </Column>
+                            <Column>
+                              <Text className="text-center text-white font-[700] text-[10px] leading-[11px] text-start">
+                                Sylvan Learning Franchisees Discuss Multi-Unit
+                                Ownership and Scaling Their Business
+                              </Text>
+                            </Column>
+                          </Row>
+                        </Section>
+                        <Section align="center" className="bg-[#B72D26]">
+                          <Row align="center">
+                            <Column
+                              align="left"
+                              className="text-[#fff] text-[10px] text-[700] leading-[0px]"
+                            ></Column>
+                            <Column align="right">
+                              <Text className="text-end text-white font-[700] text-[10px] leading-[0px] m-[8px]">
+                                Amplify Reach
+                              </Text>
+                            </Column>
+                          </Row>
+                        </Section>
+                      </Section>
+                    </Column>
+                    <Column align="right">
+                      <Section align="left" className="max-w-[167px] mt-[10px]">
+                        <Img
+                          className="w-full h-[131px]"
+                          src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699306125/8261e5e01ed7112ce73e5e01ea9418274711_1_diwrkt.png"
+                        />
+                        <Section align="center" className="bg-[#E11C22]">
+                          <Row align="left">
+                            <Column>
+                              <Text className="text-white font-[700] text-[21px] mx-[6px] text-start">
+                                1
+                              </Text>
+                            </Column>
+                            <Column>
+                              <Text className="text-center text-white font-[700] text-[10px] leading-[11px] text-start">
+                                Sylvan Learning Franchisees Discuss Multi-Unit
+                                Ownership and Scaling Their Business
+                              </Text>
+                            </Column>
+                          </Row>
+                        </Section>
+                        <Section align="center" className="bg-[#B72D26]">
+                          <Row align="center">
+                            <Column
+                              align="left"
+                              className="text-[#fff] text-[10px] text-[700] leading-[0px]"
+                            ></Column>
+                            <Column align="right">
+                              <Text className="text-end text-white font-[700] text-[10px] leading-[0px] m-[8px]">
+                                Amplify Reach
+                              </Text>
+                            </Column>
+                          </Row>
+                        </Section>
+                      </Section>
+                    </Column>
+                  </Row>
+                </Section>
+              </Section>
+              <Section className="bg-[#E11C22] px-[43px] py-[30px] mt-[58px]">
+                <Row>
+                  <Column align="left" className="max-w-[234px]">
+                    <Button
+                      className="bg-[#283342] rounded-[25px] text-white py-[13px] px-4 text-[12px]"
+                      href="/"
+                    >
+                      View Complete AMPD Statistics
+                    </Button>
+                  </Column>
+                  <Column align="right" className="max-w-[234px]">
+                    <Button
+                      className="bg-[#283342] rounded-[25px] text-center text-white py-[13px] px-4 text-[12px]"
+                      href="/"
+                    >
+                      Login to Dashboard
+                    </Button>
+                  </Column>
+                </Row>
+              </Section>
+              <Section align="center" className="mt-[38px]">
+                <Column align="center">
+                  <Row align="center">
+                    <Img style={{ float: 'center' }}  src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699380563/Logo_Copy_jl0nj6.png" />
                   </Row>
                   <Row align="center">
-                    <Text className="leading-[0rem] text-center">
-                      This is test text
+                    <Text className="text-[#AAAAAA] text-center text-[12px] font-[400]">
+                      1851franchise.com
+                    </Text>
+                    <Text className="text-[#AAAAAA] text-center text-[12px] font-[400] mt-[37px]">
+                      Prudential Plaza, 130 E Randolph St #1950, Chicago, IL
+                      60601 <br /> Click here to unsubscribe
                     </Text>
                   </Row>
                 </Column>
-                <Column>
-                  <Row>
-                    <Table data={data} />
-                  </Row>
-                </Column>
-                <Column align="center" className="">
-                  <Row>
-                    <Img
-                      src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698435097/dszzvmsffxn74czkvswv.png"
-                      alt="Diagram"
-                      width="200"
-                      height="200"
-                    />
-                  </Row>
-                  <Row className="ml-20 mt-5">
-                    <Img
-                      className="items-center"
-                      src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698437434/vrqscjbkdyxaqwcpq8y8.png"
-                      alt="Svg"
-                    />
-                  </Row>
-                  <Row>
-                    <Text className="leading-[0rem] text-center">
-                      This is test text
-                    </Text>
-                  </Row>
-                </Column>
-                <Column>
-                  <Row>
-                    <Table data={data} />
-                  </Row>
-                </Column>
-              </Row>
-              <Row align="center" className="mt-[22px]">
-                <Column align="center" className="">
-                  <Row align="center">
-                    <Img
-                      src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698435097/dszzvmsffxn74czkvswv.png"
-                      alt="Diagram"
-                      width="200"
-                      height="200"
-                    />
-                  </Row>
-                  <Row className="ml-20 mt-5">
-                    <Img
-                      className="items-center"
-                      src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698437434/vrqscjbkdyxaqwcpq8y8.png"
-                      alt="Svg"
-                    />
-                  </Row>
-                  <Row align="center">
-                    <Text className="leading-[0rem] text-center">
-                      This is test text
-                    </Text>
-                  </Row>
-                </Column>
-                <Column>
-                  <Row>
-                    <Table data={data} />
-                  </Row>
-                </Column>
-                <Column align="center" className="">
-                  <Row>
-                    <Img
-                      src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698435097/dszzvmsffxn74czkvswv.png"
-                      alt="Diagram"
-                      width="200"
-                      height="200"
-                    />
-                  </Row>
-                  <Row className="ml-20 mt-5">
-                    <Img
-                      className="items-center"
-                      src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698437434/vrqscjbkdyxaqwcpq8y8.png"
-                      alt="Svg"
-                    />
-                  </Row>
-                  <Row>
-                    <Text className="leading-[0rem] text-center">
-                      This is test text
-                    </Text>
-                  </Row>
-                </Column>
-                <Column>
-                  <Row>
-                    <Table data={data} />
-                  </Row>
-                </Column>
-              </Row>
-              <Row align="center" className="mt-[22px]">
-                <Column align="center" className="">
-                  <Row align="center">
-                    <Img
-                      src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698435097/dszzvmsffxn74czkvswv.png"
-                      alt="Diagram"
-                      width="200"
-                      height="200"
-                    />
-                  </Row>
-                  <Row className="ml-20 mt-5">
-                    <Img
-                      className="items-center"
-                      src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698437434/vrqscjbkdyxaqwcpq8y8.png"
-                      alt="Svg"
-                    />
-                  </Row>
-                  <Row align="center">
-                    <Text className="leading-[0rem] text-center">
-                      This is test text
-                    </Text>
-                  </Row>
-                </Column>
-                <Column>
-                  <Row>
-                    <Table data={data} />
-                  </Row>
-                </Column>
-                <Column align="center" className="">
-                  <Row>
-                    <Img
-                      src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698435097/dszzvmsffxn74czkvswv.png"
-                      alt="Diagram"
-                      width="200"
-                      height="200"
-                    />
-                  </Row>
-                  <Row className="ml-20 mt-5">
-                    <Img
-                      className="items-center"
-                      src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698437434/vrqscjbkdyxaqwcpq8y8.png"
-                      alt="Svg"
-                    />
-                  </Row>
-                  <Row>
-                    <Text className="leading-[0rem] text-center">
-                      This is test text
-                    </Text>
-                  </Row>
-                </Column>
-                <Column>
-                  <Row>
-                    <Table data={data} />
-                  </Row>
-                </Column>
-              </Row>
-              <Row>
-                <Column>
-                  <Img
-                    width="100%"
-                    src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1698444011/Accel_Email_Reports_1_.pdf_2_rrley7.png"
-                  />
-                </Column>
-              </Row>
-              <Heading className="mt-[15px]">Demo Heading</Heading>
-            </Column>
+              </Section>
+            </Section>
+            <Section></Section>
           </Section>
         </Container>
       </Body>
