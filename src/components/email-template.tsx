@@ -18,7 +18,6 @@ import {
   Text,
 } from "@react-email/components";
 
-
 interface EmailTemplateProps {
   firstName: string;
 }
@@ -66,11 +65,14 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
               </Text>
             </Row>
           </Section>
-          <Section align="center" className="bg-[#EBEBEB] px-[20px] pt-[20px] mt-[0px]">
+          <Section
+            align="center"
+            className="bg-[#EBEBEB] px-[20px] pt-[20px] mt-[0px]"
+          >
             <Section>
               <Section align="center">
                 <Row align="center">
-                  <Column  align="left">
+                  <Column align="left">
                     <Section
                       align="left"
                       className="h-[253px] bg-[#283342] max-w-[255px]"
@@ -110,7 +112,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
                               <Img src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699309964/Group_848_fi1yhk.png" />
                             </Column>
                             <Column align="center">
-                              <Img  src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699395179/Icon_2_wiijow.png" />
+                              <Img src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699395179/Icon_2_wiijow.png" />
                             </Column>
                             {/* <Column align="center">
                               <Img src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699309964/Group_848_fi1yhk.png" />
@@ -216,12 +218,12 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
               <Section className="bg-[#283342]">
                 <Hr className=" border-t-[#E11C22] my-[31px]" />
                 <Section className="  ">
-                  <Row align="center" className="px-[10px]">
+                  <Row align="center" className="px-[10px] pl-[33px]">
                     <Column align="left">
                       <Section align="left" className="max-w-[167px] mt-[10px]">
                         <Img
                           className="w-full h-[131px]"
-                          src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699306125/8261e5e01ed7112ce73e5e01ea9418274711_1_diwrkt.png"
+                          src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699426244/a361bdc1ace0a2da41031961b3300bab9315_2_l0xrhj.png"
                         />
                         <Section align="center" className="bg-[#E11C22]">
                           <Row align="left">
@@ -257,9 +259,9 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
                       <Section align="left" className="max-w-[167px] mt-[10px]">
                         <Img
                           className="w-full h-[131px]"
-                          src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699306125/8261e5e01ed7112ce73e5e01ea9418274711_1_diwrkt.png"
+                          src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699426244/a361bdc1ace0a2da41031961b3300bab9315_3_cwoyvx.png"
                         />
-                        <Section  className="bg-[#E11C22]">
+                        <Section className="bg-[#E11C22]">
                           <Row align="left">
                             <Column>
                               <Text className="text-white font-[700] text-[21px] mx-[6px] text-start">
@@ -289,11 +291,51 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
                         </Section>
                       </Section>
                     </Column>
+                  </Row>
+                </Section>
+                <Section className="mx-auto ml-[2px] mt-[29px]">
+                  <Row align="center" className="px-[10px] pl-[33px]">
                     <Column align="right">
                       <Section align="left" className="max-w-[167px] mt-[10px]">
                         <Img
                           className="w-full h-[131px]"
-                          src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699306125/8261e5e01ed7112ce73e5e01ea9418274711_1_diwrkt.png"
+                          src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699426244/a361bdc1ace0a2da41031961b3300bab9315_2_l0xrhj.png"
+                        />
+                        <Section align="center" className="bg-[#E11C22]">
+                          <Row align="left">
+                            <Column>
+                              <Text className="text-white font-[700] text-[21px] mx-[6px] text-start">
+                                1
+                              </Text>
+                            </Column>
+                            <Column>
+                              <Text className="text-center text-white font-[700] text-[10px] leading-[11px] text-start">
+                                Sylvan Learning Franchisees Discuss Multi-Unit
+                                Ownership and Scaling Their Business
+                              </Text>
+                            </Column>
+                          </Row>
+                        </Section>
+                        <Section align="center" className="bg-[#B72D26]">
+                          <Row align="center">
+                            <Column
+                              align="left"
+                              className="text-[#fff] text-[10px] text-[700] leading-[0px]"
+                            ></Column>
+                            <Column align="right">
+                              <Text className="text-end text-white font-[700] text-[10px] leading-[0px] m-[8px]">
+                                Amplify Reach
+                              </Text>
+                            </Column>
+                          </Row>
+                        </Section>
+                      </Section>
+                    </Column>
+                    <Column align="left">
+                      <Section align="left" className="max-w-[167px] mt-[10px]">
+                        <Img
+                          className="w-full h-[131px]"
+                          src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699426270/a361bdc1ace0a2da41031961b3300bab9315_1_wyh02r.png"
                         />
                         <Section align="center" className="bg-[#E11C22]">
                           <Row align="left">
@@ -328,84 +370,48 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
                   </Row>
                 </Section>
                 <Section className="mx-auto ml-[2px] mt-[29px]">
-                  <Row align="center" className="px-[10px]">
-                    <Column align="left">
-                      <Section align="left" className="max-w-[167px] mt-[10px]">
-                        <Img
-                          className="w-full h-[131px]"
-                          src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699306125/8261e5e01ed7112ce73e5e01ea9418274711_1_diwrkt.png"
-                        />
-                        <Section align="center" className="bg-[#E11C22]">
-                          <Row align="left">
-                            <Column>
-                              <Text className="text-white font-[700] text-[21px] mx-[6px] text-start">
-                                1
-                              </Text>
-                            </Column>
-                            <Column>
-                              <Text className="text-center text-white font-[700] text-[10px] leading-[11px] text-start">
-                                Sylvan Learning Franchisees Discuss Multi-Unit
-                                Ownership and Scaling Their Business
-                              </Text>
-                            </Column>
-                          </Row>
-                        </Section>
-                        <Section align="center" className="bg-[#B72D26]">
-                          <Row align="center">
-                            <Column
-                              align="left"
-                              className="text-[#fff] text-[10px] text-[700] leading-[0px]"
-                            ></Column>
-                            <Column align="right">
-                              <Text className="text-end text-white font-[700] text-[10px] leading-[0px] m-[8px]">
-                                Amplify Reach
-                              </Text>
-                            </Column>
-                          </Row>
-                        </Section>
-                      </Section>
-                    </Column>
-                    <Column align="center">
-                      <Section align="left" className="max-w-[167px] mt-[10px]">
-                        <Img
-                          className="w-full h-[131px]"
-                          src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699306125/8261e5e01ed7112ce73e5e01ea9418274711_1_diwrkt.png"
-                        />
-                        <Section align="center" className="bg-[#E11C22]">
-                          <Row align="left">
-                            <Column>
-                              <Text className="text-white font-[700] text-[21px] mx-[6px] text-start">
-                                1
-                              </Text>
-                            </Column>
-                            <Column>
-                              <Text className="text-center text-white font-[700] text-[10px] leading-[11px] text-start">
-                                Sylvan Learning Franchisees Discuss Multi-Unit
-                                Ownership and Scaling Their Business
-                              </Text>
-                            </Column>
-                          </Row>
-                        </Section>
-                        <Section align="center" className="bg-[#B72D26]">
-                          <Row align="center">
-                            <Column
-                              align="left"
-                              className="text-[#fff] text-[10px] text-[700] leading-[0px]"
-                            ></Column>
-                            <Column align="right">
-                              <Text className="text-end text-white font-[700] text-[10px] leading-[0px] m-[8px]">
-                                Amplify Reach
-                              </Text>
-                            </Column>
-                          </Row>
-                        </Section>
-                      </Section>
-                    </Column>
+                  <Row align="center" className="px-[10px] pl-[33px]">
                     <Column align="right">
                       <Section align="left" className="max-w-[167px] mt-[10px]">
                         <Img
                           className="w-full h-[131px]"
-                          src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699306125/8261e5e01ed7112ce73e5e01ea9418274711_1_diwrkt.png"
+                          src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699426244/a361bdc1ace0a2da41031961b3300bab9315_3_cwoyvx.png"
+                        />
+                        <Section align="center" className="bg-[#E11C22]">
+                          <Row align="left">
+                            <Column>
+                              <Text className="text-white font-[700] text-[21px] mx-[6px] text-start">
+                                1
+                              </Text>
+                            </Column>
+                            <Column>
+                              <Text className="text-center text-white font-[700] text-[10px] leading-[11px] text-start">
+                                Sylvan Learning Franchisees Discuss Multi-Unit
+                                Ownership and Scaling Their Business
+                              </Text>
+                            </Column>
+                          </Row>
+                        </Section>
+                        <Section align="center" className="bg-[#B72D26]">
+                          <Row align="center">
+                            <Column
+                              align="left"
+                              className="text-[#fff] text-[10px] text-[700] leading-[0px]"
+                            ></Column>
+                            <Column align="right">
+                              <Text className="text-end text-white font-[700] text-[10px] leading-[0px] m-[8px]">
+                                Amplify Reach
+                              </Text>
+                            </Column>
+                          </Row>
+                        </Section>
+                      </Section>
+                    </Column>
+                    <Column align="left">
+                      <Section align="left" className="max-w-[167px] mt-[10px]">
+                        <Img
+                          className="w-full h-[131px]"
+                          src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699426244/a361bdc1ace0a2da41031961b3300bab9315_2_l0xrhj.png"
                         />
                         <Section align="center" className="bg-[#E11C22]">
                           <Row align="left">
@@ -439,49 +445,13 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
                     </Column>
                   </Row>
                 </Section>
-                <Section className="mx-auto ml-[2px] mt-[29px]">
-                  <Row align="center" className="px-[10px]">
-                    <Column align="left">
-                      <Section align="left" className="max-w-[167px] mt-[10px]">
-                        <Img
-                          className="w-full h-[131px]"
-                          src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699306125/8261e5e01ed7112ce73e5e01ea9418274711_1_diwrkt.png"
-                        />
-                        <Section align="center" className="bg-[#E11C22]">
-                          <Row align="left">
-                            <Column>
-                              <Text className="text-white font-[700] text-[21px] mx-[6px] text-start">
-                                1
-                              </Text>
-                            </Column>
-                            <Column>
-                              <Text className="text-center text-white font-[700] text-[10px] leading-[11px] text-start">
-                                Sylvan Learning Franchisees Discuss Multi-Unit
-                                Ownership and Scaling Their Business
-                              </Text>
-                            </Column>
-                          </Row>
-                        </Section>
-                        <Section align="center" className="bg-[#B72D26]">
-                          <Row align="center">
-                            <Column
-                              align="left"
-                              className="text-[#fff] text-[10px] text-[700] leading-[0px]"
-                            ></Column>
-                            <Column align="right">
-                              <Text className="text-end text-white font-[700] text-[10px] leading-[0px] m-[8px]">
-                                Amplify Reach
-                              </Text>
-                            </Column>
-                          </Row>
-                        </Section>
-                      </Section>
-                    </Column>
+                <Section className="mx-auto ml-[2px] mt-[29px] mb-[20px]">
+                  <Row align="center" className="px-[10px] pl-[33px]">
                     <Column align="center">
                       <Section align="left" className="max-w-[167px] mt-[10px]">
                         <Img
                           className="w-full h-[131px]"
-                          src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699306125/8261e5e01ed7112ce73e5e01ea9418274711_1_diwrkt.png"
+                          src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699426270/a361bdc1ace0a2da41031961b3300bab9315_1_wyh02r.png"
                         />
                         <Section align="center" className="bg-[#E11C22]">
                           <Row align="left">
@@ -513,11 +483,12 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
                         </Section>
                       </Section>
                     </Column>
+
                     <Column align="right">
                       <Section align="left" className="max-w-[167px] mt-[10px]">
                         <Img
                           className="w-full h-[131px]"
-                          src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699306125/8261e5e01ed7112ce73e5e01ea9418274711_1_diwrkt.png"
+                          src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699426244/a361bdc1ace0a2da41031961b3300bab9315_3_cwoyvx.png"
                         />
                         <Section align="center" className="bg-[#E11C22]">
                           <Row align="left">
@@ -575,11 +546,11 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
               <Section align="center" className="mt-[38px]">
                 <Column align="center">
                   <Row align="center">
-                    <Img style={{ float: 'center' }}  src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699380563/Logo_Copy_jl0nj6.png" />
+                    <Img src="https://res.cloudinary.com/dsexjh4mb/image/upload/v1699380563/Logo_Copy_jl0nj6.png" />
                   </Row>
                   <Row align="center">
                     <Text className="text-[#AAAAAA] text-center text-[12px] font-[400]">
-                      1851franchise.com
+                      {"1851franchise.com"}
                     </Text>
                     <Text className="text-[#AAAAAA] text-center text-[12px] font-[400] mt-[37px]">
                       Prudential Plaza, 130 E Randolph St #1950, Chicago, IL
